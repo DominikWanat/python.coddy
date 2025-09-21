@@ -12,10 +12,12 @@
 data_list = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
 
 def frequency_counter(data_list):
-    # Write code here
-    data_list_uniq =list(set(data_list))
-    for i in data_list_uniq(i):
-        data_list_uniq_cout = data_list.count(i)
-        data_list_dic = {i:data_list_uniq_cout}
+    freq_dict={}
+    for item in data_list:
+        if item in freq_dict:
+            freq_dict[item] += 1
+        else:
+            freq_dict[item] = 1
+    return freq_dict
 
 print(frequency_counter(data_list))
